@@ -1,14 +1,23 @@
-const sword = {
-  name: "needle",
+const item = {
+  name: "Needle",
   type: "weapon",
   durabilty: 70,
-  enhancements: 0
+  enhancements: 'PEN'
 };
 
 module.exports = {
-  success: item => {},
+  success: (item) => {
 
-  fail: item => {},
+  },
 
-  repair: item => {}
+  fail: (item) => {},
+
+repair: (item) => {
+
+if (item.durabilty < 100){
+  
+  return item.durabilty = 100;
+}
+
+  }
 };
